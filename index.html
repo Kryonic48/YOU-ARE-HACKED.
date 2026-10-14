@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>Security Alert — Prank</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;background:#050505;color:#edf2f7}body{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;min-height:100svh;display:flex;justify-content:center}main{width:100%;max-width:560px;min-height:100svh;padding:clamp(16px,4vw,28px) clamp(16px,5vw,25px) 22px;display:flex;flex-direction:column;justify-content:center;text-align:center;overflow-wrap:anywhere;background:radial-gradient(ellipse at 28% 8%,#31050b 0%,#100305 35%,#050505 70%);border-inline:1px solid #26060a}.tag{color:#ff3349;letter-spacing:.12em;font-size:.68rem;font-weight:800}.figure{height:clamp(115px,20vh,180px);margin:12px auto 0;width:100%;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 75%,#8d0718 0%,#28040a 27%,transparent 67%)}.hood{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);width:150px;height:155px;background:linear-gradient(110deg,#080808,#161616 50%,#030303);border:2px solid #b20b20;border-bottom:0;border-radius:75px 75px 10px 10px;box-shadow:0 0 25px #f0002838}.hood:before{content:"";position:absolute;left:24px;right:24px;top:28px;height:86px;border-radius:50% 50% 42% 42%;background:#020202;box-shadow:0 0 18px #000 inset}.glitch{font-family:Impact,system-ui,sans-serif;font-size:clamp(2rem,8vw,3.2rem);line-height:.98;color:#ff2039;text-shadow:2px 0 #65000b,-2px 0 #a70015;margin:12px 0}.sub{font:600 clamp(.92rem,3.6vw,1.1rem)/1.45 system-ui,sans-serif}.terminal{margin:16px auto;width:100%;text-align:left;background:#030303;border:1px solid #4d1118;border-radius:8px;padding:13px;color:#ff5362;line-height:1.65;font-size:.78rem;min-height:105px;overflow-wrap:anywhere}.access{width:100%;margin:4px auto 12px;border:1px solid #9c1021;border-radius:8px;padding:13px;text-align:left;background:#090303}.access-title{color:#ff3048;font-weight:800;font-size:.83rem;margin-bottom:9px}.access div:not(.access-title){font: .84rem/1.65 system-ui,sans-serif;color:#cbd5e1}.panel{width:100%;margin:0 auto 12px;border:1px solid #b91c2c;border-radius:8px;padding:14px 12px;display:grid;grid-template-columns:1fr;gap:10px;background:#080303}.price{font:900 clamp(2rem,8vw,2.8rem)/1.1 system-ui,sans-serif;color:#ff3048}.note{color:#aeb2bb;font: .78rem/1.45 system-ui,sans-serif}.timer{font-size:clamp(2.2rem,9vw,3rem);font-weight:900;color:#ff3048;margin:0 0 6px;letter-spacing:.06em}button{font:800 .95rem system-ui,sans-serif;border:1px solid #ff3048;background:#120306;color:#ff4655;padding:13px 16px;border-radius:7px;cursor:pointer;width:100%;margin:5px 0}button:active{background:#3b0710}input[type="text"]{width:100%;padding:12px;background:#120306;border:1px solid #ff3048;color:#ff4655;border-radius:7px;font:800 .95rem system-ui,sans-serif;margin:5px 0;text-align:center}#pinError{display:none;margin:8px 0;padding:10px;border:1px solid #ff3349;background:#31050b;border-radius:6px;color:#ff8090;font:600 .85rem/1.4 system-ui,sans-serif}#truth{display:none;margin:12px auto 0;width:100%;padding:14px;border:1px solid #4ade80;background:#062014;border-radius:8px;color:#d1fae5;font:600 .92rem/1.5 system-ui,sans-serif}.foot{font: .68rem/1.45 system-ui,sans-serif;color:#777;margin-top:12px}body.fs main{max-width:none;min-height:100svh;padding-top:max(12px,env(safe-area-inset-top));padding-bottom:max(12px,env(safe-area-inset-top))} @media(max-height:740px){main{justify-content:flex-start;padding-top:12px}.figure{height:95px;margin-top:6px}.hood{transform:translateX(-50%) scale(.72);transform-origin:bottom center}.glitch{font-size:clamp(1.7rem,7vw,2.5rem);margin:8px 0}.terminal{margin:10px auto;min-height:82px;padding:10px}.access{padding:10px;margin-bottom:8px}.panel{padding:10px;margin-bottom:8px}.foot{margin-top:6px}}
+</style></head>
+<body><main>
+<div class="tag">●  SECURITY ALERT</div>
+<div class="figure" aria-hidden="true"><div class="hood"></div></div>
+<h1 class="glitch">YOUR PHONE<br>IS HACKED!</h1>
+<div class="sub">Your device has supposedly been compromised.</div>
+<div class="terminal" id="terminal">&gt; Initializing pretend security scan...<br>&gt; Checking files... <br>&gt; Connecting to hacker server...<br>&gt; Waiting for  the VIRUS to begin...</div>
+<section class="access"><div class="access-title">ALLEGEDLY ACCESSED:</div><div>▰ Personal photos &amp; videos</div><div>▰ Messages &amp; contacts</div><div>▰ Files &amp; documents</div><div>▰ Location &amp; device details</div><div>▰ Camera &amp; microphone</div></section>
+<section class="panel"><div><div class="price">$500 USD</div><div class="note">TIME LEFT</div>
+<div class="timer" id="timer">23:59:47</div>
+<button id="start">WAYS TO UNLOCK YOUR PHONE!</button>
+
+<!-- Grey click here button that transforms into green after 1 minute -->
+<button id="actionBtn" style="border-color:#71717a; background:#18181b; color:#a1a1aa;">CLICK HERE</button>
+
+<!-- PIN entry container, hidden initially -->
+<div id="pinContainer" style="display:none;">
+  <div class="note" id="pinInstructions">The ways will be for you after 1 min. Enter PIN lock code:</div>
+  <input type="text" id="pinInput" placeholder="Enter PIN code" autocomplete="off">
+  <div id="pinError">Incorrect PIN! Everything went wrong! Try again.</div>
+  <button id="submitPin">SUBMIT PIN</button>
+</div>
+
+<div id="truth"><br> It did scan, track, record, or access your phone.</div>
+</main><script>
+const terminal=document.getElementById('terminal'),truth=document.getElementById('truth'),timer=document.getElementById('timer'),actionBtn=document.getElementById('actionBtn'),startBtn=document.getElementById('start'),pinContainer=document.getElementById('pinContainer'),pinInput=document.getElementById('pinInput'),submitPin=document.getElementById('submitPin'),pinError=document.getElementById('pinError');
+let started=false,remaining=86387,interval,fullscreenTimer=null,pinAttempts=0,isUnlockedAndReady=false;
+const lines=['&gt; Running diagnostics...','&gt; Checking for suspicious activities...','&gt; Contacting the Hacker SERVER...','&gt; Payment demand: dollars only','&gt; Simulation complete.'];
+
+startBtn.addEventListener('click',async()=>{
+  if(!started){
+    started=true;
+    try{await document.documentElement.requestFullscreen()}catch(e){}
+    document.body.classList.add('fs');
+    terminal.innerHTML='';
+    let i=0;
+    const t=setInterval(()=>{if(i>=lines.length){clearInterval(t);return}terminal.innerHTML+=lines[i++]+'<br>';},650);
+    interval=setInterval(()=>{remaining=Math.max(0,remaining-1);const h=String(Math.floor(remaining/3600)).padStart(2,'0'),m=String(Math.floor((remaining%3600)/60)).padStart(2,'0'),s=String(remaining%60).padStart(2,'0');timer.textContent=`${h}:${m}:${s}`;if(remaining===0){clearInterval(interval);truth.style.display='block'}},1000);
+    
+    pinContainer.style.display='block';
+    startBtn.style.display='none';
+  }
+});
+
+submitPin.addEventListener('click',(e)=>{
+  e.preventDefault();
+  pinAttempts++;
+  if(pinAttempts < 3){
+    pinError.style.display = 'block'; // Show error message inside webpage
+    pinInput.value='';
+  } else {
+    pinError.style.display = 'none';
+    alert('PIN correct! The ways to unlock your phone are now ready.');
+    pinContainer.style.display='none';
+  }
+});
+
+pinInput.addEventListener('keydown',(e)=>{
+  if(e.key === 'Enter'){
+    submitPin.click();
+  }
+});
+
+// Handle fullscreen and 1-minute timer for the button transformation
+document.addEventListener('fullscreenchange',()=>{
+  const isFs = !!document.fullscreenElement;
+  document.body.classList.toggle('fs', isFs);
+  
+  if(isFs){
+    if(!fullscreenTimer && !isUnlockedAndReady){
+      fullscreenTimer = setTimeout(()=>{
+        isUnlockedAndReady = true;
+        // Transform the grey button into the active green button
+        actionBtn.style.borderColor = '#4ade80';
+        actionBtn.style.background = '#062014';
+        actionBtn.style.color = '#4ade80';
+      }, 60000); // 1 minute
+    }
+  } else {
+    if(started && document.documentElement.requestFullscreen){
+      document.documentElement.requestFullscreen().catch(()=>{});
+    }
+  }
+});
+
+// Click behavior: Does nothing before 1 min, shows prank alert after 1 min
+actionBtn.addEventListener('click',()=>{
+  if(isUnlockedAndReady){
+    alert('its a prank by ROHAN SHINO');
+  } else {
+    alert('Please wait for the 1 minute timer to complete!');
+  }
+});
+</script></body></html>
